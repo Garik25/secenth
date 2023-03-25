@@ -116,6 +116,7 @@ nav .container .nav__logo h2 a {
 }
 nav .container .nav__logo .nav_svg {
   display: none;
+  cursor: pointer;
 }
 nav .container .nav__menu {
   display: flex;
@@ -140,7 +141,10 @@ nav .container .nav__menu .nav__menu__item a::before {
 nav .container .nav__menu .nav__menu__item a:hover::before {
   width: 100%;
 }
-@media screen and (max-width: 870px) {
+@media screen and (max-width: 890px) {
+  nav .container {
+    position: relative;
+  }
   nav .container .nav__logo {
     display: flex;
     align-items: center;
@@ -151,6 +155,30 @@ nav .container .nav__menu .nav__menu__item a:hover::before {
   }
   nav .container .nav__menu {
     display: none;
+    position: absolute;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    top: 85px;
+    gap: 0px;
+  }
+  nav .container .nav__menu .nav__menu__item {
+    border-bottom: 0.5px solid #eee;
+  }
+  nav .container .nav__menu .nav__menu__item a {
+    display: block;
+    padding: 32px;
+    transition: 0.3s;
+  }
+  nav .container .nav__menu .nav__menu__item a::before {
+    display: none;
+  }
+  nav .container .nav__menu .nav__menu__item a:hover {
+    background: #eee;
+  }
+  nav .container .nav__menu .nav__menu__item:nth-child(4) {
+    border-bottom: none;
   }
 }
 @media screen and (max-width: 420px) {
@@ -163,10 +191,7 @@ nav .container .nav__menu .nav__menu__item a:hover::before {
     width: 100%;
   }
   nav .container .nav__logo .nav_svg svg {
-    width: 100%;
-  }
-  nav .container .nav__menu {
-    display: none;
+    width: 32px;
   }
 }
 nav .container .nav__icons {
@@ -208,6 +233,7 @@ nav .container .nav__icons .serach button {
   display: none;
 }
 nav .container .nav__icons .serach button svg {
+  width: 25px;
   display: none;
 }
 nav .container .nav__icons .nav__icons__end {
@@ -260,6 +286,88 @@ nav .container .nav__icons .nav__icons__end .to__basket__btn a svg {
   nav .container .nav__icons .nav__icons__end {
     gap: 32px;
   }
+}
+
+header {
+  margin-top: 40px;
+}
+header .container {
+  display: flex;
+  gap: 64px;
+}
+header .container .header__menu {
+  position: relative;
+}
+header .container .header__menu .header__menu__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  width: 217px;
+  height: 24px;
+}
+header .container .header__menu .header__menu__item a {
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+  white-space: nowrap;
+  width: 100%;
+  line-height: 24px;
+}
+header .container .header__menu .header__menu__item .header__menu__item__open {
+  cursor: pointer;
+}
+header .container .header__menu .header__menu__item:last-child {
+  margin-bottom: 0px;
+}
+header .container .header__menu::after {
+  content: "";
+  width: 0.5px;
+  height: calc(100% + 40px);
+  position: absolute;
+  background: #000000;
+  top: -40px;
+  right: -16px;
+  opacity: 0.3;
+}
+header .container .header__slider .header__slider_item {
+  display: flex;
+  justify-content: center;
+  background: #000000;
+  align-items: center;
+  padding: 20px;
+  width: 850px;
+  height: 344px;
+}
+header .container .header__slider .header__slider_item .header__slider_items {
+  padding: 25px;
+}
+header .container .header__slider .header__slider_item .header__slider_items .apple_logo {
+  display: flex;
+  gap: 20px;
+}
+header .container .header__slider .header__slider_item .header__slider_items .apple_logo p {
+  color: #FAFAFA;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+header .container .header__slider .header__slider_item .header__slider_items h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 60px;
+  color: #FAFAFA;
+}
+header .container .header__slider .header__slider_item .header__slider_items a {
+  color: #FAFAFA;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  cursor: pointer;
+}
+header .container .header__slider .header__slider_item img {
+  width: 450px;
+  height: 300px;
 }
 
 * {
