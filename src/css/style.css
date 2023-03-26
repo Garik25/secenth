@@ -306,6 +306,8 @@ header .container .header__menu .header__menu__item {
   height: 24px;
 }
 header .container .header__menu .header__menu__item a {
+  display: flex;
+  align-items: center;
   font-size: 16px;
   color: #000000;
   text-decoration: none;
@@ -329,17 +331,16 @@ header .container .header__menu::after {
   right: -16px;
   opacity: 0.3;
 }
+header .container .header__slider {
+  background: #000000;
+}
 header .container .header__slider .header__slider_item {
   display: flex;
   justify-content: center;
-  background: #000000;
   align-items: center;
   padding: 20px;
-  width: 850px;
+  max-width: 850px;
   height: 344px;
-}
-header .container .header__slider .header__slider_item .header__slider_items {
-  padding: 25px;
 }
 header .container .header__slider .header__slider_item .header__slider_items .apple_logo {
   display: flex;
@@ -358,6 +359,9 @@ header .container .header__slider .header__slider_item .header__slider_items h2 
   color: #FAFAFA;
 }
 header .container .header__slider .header__slider_item .header__slider_items a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: #FAFAFA;
   font-weight: 500;
   font-size: 16px;
@@ -366,8 +370,90 @@ header .container .header__slider .header__slider_item .header__slider_items a {
   cursor: pointer;
 }
 header .container .header__slider .header__slider_item img {
+  padding: 15px;
   width: 450px;
   height: 300px;
+}
+header .container .header__slider .radio {
+  margin-left: 50%;
+  margin-bottom: 5px;
+}
+header .container .header__slider .radio :nth-child(3) {
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+  background: #cc0000;
+}
+@media screen and (max-width: 1100px) {
+  header .container {
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  header .container .header__menu {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+  }
+  header .container .header__menu::after {
+    display: none;
+  }
+  header .container .header__menu::-webkit-scrollbar {
+    height: 8px;
+  }
+  header .container .header__menu::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  header .container .header__menu::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  header .container .header__menu::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  header .container .header__menu .header__menu__item {
+    padding: 25px;
+    text-align: center;
+    border-right: 2px solid rgba(250, 250, 250, 0.644);
+    border-left: 2px solid rgba(218, 198, 198, 0.644);
+  }
+  header .container .header__menu .header__menu__item .header__menu__item__open svg {
+    display: none;
+  }
+  header .container .header__slider .header__slider_item {
+    height: 300px;
+  }
+  header .container .header__slider .header__slider_item .header__slider_items h2 {
+    margin: 0px;
+  }
+}
+@media screen and (max-width: 688px) {
+  header .container .header__slider .header__slider_item {
+    flex-wrap: wrap;
+    width: 408px;
+    height: 400px;
+    gap: 60px;
+  }
+  header .container .header__slider .header__slider_item .header__slider_items .apple_logo {
+    justify-content: center;
+  }
+  header .container .header__slider .header__slider_item .header__slider_items h2 {
+    text-align: center;
+    margin: 12px;
+  }
+  header .container .header__slider .header__slider_item .header__slider_items a {
+    justify-content: center;
+  }
+  header .container .header__slider .radio {
+    display: none;
+  }
+}
+@media screen and (max-width: 432px) {
+  header .container .header__slider .header__slider_item {
+    max-width: 290px;
+  }
+  header .container .header__slider .header__slider_item img {
+    width: 320px;
+  }
 }
 
 * {
