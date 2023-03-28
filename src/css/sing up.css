@@ -645,4 +645,102 @@ template {
 
 [hidden] {
   display: none;
-}/*# sourceMappingURL=style.css.map */
+}
+
+@font-face {
+  font-family: "Inter-Variable";
+  src: url(/SRC/fonts/Inter-Variable.ttf);
+}
+body {
+  font-family: "Inter-Variable";
+}
+
+header .header {
+  display: flex;
+}
+header .header .header_once img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 605px;
+  height: 551px;
+}
+header .header .header_two h2 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 30px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+header .header .header_two p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+header .header .header_two .input input {
+  width: 339px;
+  display: block;
+  border: none;
+  border-bottom: #000000 solid 1px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+header .header .header_two .profile_link a {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  display: block;
+  padding: 16px 8px;
+  margin-bottom: 10px;
+}
+header .header .header_two .profile_link :nth-child(1) {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  background: #DB4444;
+}
+header .header .header_two .profile_link :nth-child(2) {
+  display: flex;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  align-items: center;
+  color: #000000;
+  border: solid #000000 1px;
+}
+header .header .header_two .profile_link :nth-child(2) svg {
+  background: none;
+}
+header .header .header_two .end {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 20px;
+  text-align: center;
+}
+header .header .header_two .end a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+@media screen and (max-width: 1084px) {
+  header .header {
+    flex-wrap: nowrap;
+  }
+  header .header .header_once img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (max-width: 888px) {
+  header .header .header_once img {
+    display: none;
+  }
+}/*# sourceMappingURL=sing up.css.map */
