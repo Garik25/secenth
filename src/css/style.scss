@@ -1435,30 +1435,89 @@ main {
 
 }
 footer{
+	
 	background: $black;
+	
+	height: 440px;
+	.container{
+	
+		margin: 0 auto;
+		
+		
+		
 	.footer_items{
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		justify-content:space-between;
+	;
+	align-items: center;
 		gap: 20px;
 		.footer_item{
+			.footer__icons{
+				form{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					padding: 12px 16px;
+					width: 245px;
+					height: 36px;
+					
+					border: 1px solid $white
+					;
+					input{
+						background-color: $black;
+						
+						border: none;
+
+					}
+					button{
+					border: none;
+					background: none;
+
+					}
+				}
+			}
+			
+		
 			h3{
+				 text-align: center;
 				font-weight: 500;
 				font-size: 20px;
 				line-height: 28px;
 				color: $white;
-				margin: 0
-				;
+				margin-bottom: 24px;
+				
 
 			}
+			.footer_a{
+				margin: 10px 20px;
+				height: 48px;
+			
 			a{
+				
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 24px;
+				text-align: center;			
+				color: $white;
+				text-decoration: none;
+		
 
 			}
-			p{
+		}
+			p{  text-align: center;
+				margin-top: 33px;
+				font-weight: 500;
+				font-size: 12px;
+				line-height: 18px;
+				color: $white;
+				opacity: 0.7;
 
 			}
 			.footer_link{
 				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 12px;
 
 
 				.footer_link_left{
@@ -1470,15 +1529,25 @@ footer{
 					
 				}
 				.footer_link_right{
+					
 					a{
 						img{
 
 						}
 					}
 				}
+				
+			}
+			.internet{
+				display: flex;
+				gap: 12px;
+				align-items: center;
+				margin-top: 13px;
+				justify-content: space-around;
 			}
 		}
 	}
+}
 }
 
 /* NORMALIZE CSS */
