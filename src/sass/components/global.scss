@@ -1,0 +1,128 @@
+
+.redBtn {
+	display: block;
+	width: fit-content;
+	padding: 16px 48px;
+	background: $red;
+	color: $white;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+	text-decoration: none;
+	border-radius: $br;
+	transition: all $trs;
+
+
+
+
+}
+
+.hoveredicon {
+	cursor: pointer;
+
+	span,
+	a {
+		transition: $trs;
+	}
+
+	svg {
+		path {
+			transition: $trs;
+		}
+	}
+
+	&:hover {
+		svg {
+			path {
+				stroke: $red;
+			}
+		}
+	}
+
+	&:hover {
+		span {
+			background: $red !important;
+		}
+	}
+
+	&.header__menu__item {
+		&:hover {
+			a {
+				color: $red !important;
+			}
+
+			svg {
+				path {
+					fill: $red;
+				}
+			}
+		}
+	}
+}
+
+.container {
+	max-width: 1234px;
+	padding: 0px 32px;
+	margin: 0 auto;
+}
+
+.top__header__section {
+	background: $black;
+
+	.container {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		min-height: 48px;
+		gap: 231px;
+
+		.top__header__text {
+			p {
+				color: $mediumWhite;
+				font-size: 14px;
+				margin: 0;
+
+				a {
+					margin-left: 8px;
+					color: $mediumWhite;
+					font-weight: 600;
+				}
+			}
+		}
+
+		.top__header__langs {
+			select {
+				appearance: none;
+				background: none;
+				color: #fff;
+				border: none;
+				outline: 0;
+				cursor: pointer;
+
+				option {
+					appearance: none;
+					background: $black;
+					border: none;
+					cursor: pointer;
+				}
+			}
+		}
+
+		@media screen and (max-width: $tabletL) {
+			gap: 115px;
+		}
+
+		@media screen and (max-width: $tabletM) {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 16px;
+			padding-top: 16px;
+			padding-bottom: 16px;
+			text-align: center;
+
+			.top__header__text {
+				width: 100%;
+			}
+		}
+	}
+}

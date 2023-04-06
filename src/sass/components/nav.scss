@@ -1,0 +1,255 @@
+
+nav {
+	border-bottom: 0.5px solid #0000004d;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 40px;
+		margin-bottom: 16px;
+
+		.nav__logo {
+			h2 {
+				a {
+					color: $black;
+					text-decoration: none;
+					font-size: 24px;
+					font-family: "inter-bold";
+				}
+			}
+		}
+
+		.nav__menu {
+			display: flex;
+			gap: 48px;
+
+			.nav__menu__item {
+				a {
+					position: relative;
+					text-decoration: none;
+					color: $black;
+					font-size: 16px;
+
+					&::before {
+						content: "";
+						width: 0%;
+						height: 1px;
+						background: #00000080;
+						position: absolute;
+						left: 0;
+						bottom: -5px;
+						transition: $trs;
+					}
+
+					&:hover {
+						&::before {
+							width: 100%;
+						}
+					}
+				}
+			}
+
+			form {
+				display: none;
+			}
+		}
+
+		.nav__icons {
+			display: flex;
+			align-items: center;
+			gap: 24px;
+
+			form {
+				position: relative;
+
+				input {
+					background: $mediumGray;
+					border-radius: $br;
+					padding: 7px 45px 7px 20px;
+					border: none;
+					outline: 0;
+					width: 243px;
+					height: 38px;
+					font-size: 14px;
+					color: #00000080;
+
+					&::placeholder {
+						font-size: 12px;
+						color: #00000080;
+					}
+				}
+
+				button {
+					position: absolute;
+					right: 12px;
+					top: 8px;
+					border: none;
+					background: none;
+					cursor: pointer;
+				}
+			}
+
+			.nav__icons__end {
+				display: flex;
+				justify-content: end;
+				align-items: center;
+				gap: 16px;
+
+				.to__wish__list__btn,
+				.to__basket__btn {
+					a {
+						display: block;
+
+						svg {
+							display: block;
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+
+				.burger__menu {
+					display: none;
+					flex-direction: column;
+					justify-content: space-between;
+					align-content: space-between;
+					width: 30px;
+					height: 20px;
+
+					span {
+						display: block;
+						background: $black;
+						width: 100%;
+						height: 2px;
+						border-radius: $br;
+						transition: 0.3s;
+					}
+
+					&.active {
+						span:nth-child(1) {
+							transform: rotate(-45deg) translate(-11px, 2px);
+						}
+
+						span:nth-child(2) {
+							display: none;
+						}
+
+						span:nth-child(3) {
+							transform: rotate(45deg) translate(-11px, -2px);
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: $tabletL) {
+			.nav__menu {
+				gap: 24px;
+			}
+
+			.nav__icons {
+				form {
+					input {
+						width: 200px;
+						padding: 7px 45px 7px 10px;
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: $tabletM) {
+			.nav__icons {
+				form {
+					input {
+						width: 150px;
+						padding: 7px 45px 7px 10px;
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: $mobileL) {
+			margin-top: 8px;
+			margin-bottom: 8px;
+			position: relative;
+
+			.nav__icons {
+				form {
+					display: none;
+				}
+
+				.nav__icons__end {
+					.burger__menu {
+						display: flex;
+						cursor: pointer;
+					}
+				}
+			}
+
+			.nav__menu {
+				display: none;
+				position: absolute;
+				flex-direction: column;
+				background: #fff;
+				width: 100%;
+				left: 0;
+				top: 85px;
+				gap: 0px;
+
+				.nav__menu__item {
+					border-bottom: 0.5px solid #eee;
+
+					a {
+						display: block;
+						padding: 32px;
+						transition: $trs;
+
+						&::before {
+							display: none;
+						}
+
+						&:hover {
+							background: #eee;
+						}
+					}
+
+					&:nth-child(4) {
+						border-bottom: none;
+					}
+				}
+
+				form {
+					display: flex;
+					padding: 16px 32px;
+
+					input {
+						background: $mediumGray;
+						border-radius: $br 0px 0px $br;
+						padding: 7px 45px 7px 20px;
+						border: none;
+						outline: 0;
+						width: 100%;
+						height: 38px;
+						font-size: 14px;
+						color: #00000080;
+
+						&::placeholder {
+							font-size: 12px;
+							color: #00000080;
+						}
+					}
+
+					button {
+						background: $mediumGray;
+						border-radius: 0px $br $br 0px;
+						border: none;
+						outline: 0;
+						font-size: 14px;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
