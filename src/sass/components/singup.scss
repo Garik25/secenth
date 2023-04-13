@@ -1,0 +1,151 @@
+
+@import"./fonts.scss";
+@import"./nav.scss";
+
+
+@font-face {
+    font-family:"Inter-Variable" ;
+    src: url(/SRC/fonts/Inter-Variable.ttf);
+}
+body {
+    font-family: "Inter-Variable";
+}
+nav{
+    .container{
+        .nav__logo{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+}
+header{
+    .header{
+        display: flex;
+        justify-content: center;
+        .header_once{
+            img{
+                object-fit: cover;
+                width: 605px;
+                height: 551px;
+            }
+        }
+        .header_two{
+            h2{
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 30px;
+                color: $black;
+                margin-bottom: 10px;
+
+            }
+            p{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color:$black;
+
+            }
+            .input{
+                input{
+                    width: 339px;
+                    display: block;
+                    border: none;
+                   outline: none;
+                    margin-bottom:  30px;
+
+                    padding: 10px;
+                    
+                    
+                }
+                :hover{
+                    border: 1px solid wheat;
+                }
+
+
+            }
+        .profile_link{
+            a{
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                display: block;
+                padding: 16px 8px;
+                margin-bottom: 10px;
+              
+
+                
+            }
+            :nth-child(1){
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #fff;
+                background: $red;
+
+            }
+            :nth-child(2){
+                display: flex;
+             ;
+                gap: 10px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                align-items: center;
+                color: $black;
+                border:solid $black 1px ;
+                svg{
+                    background: none;
+                }
+
+            }
+
+        }
+            .end{
+                display: flex;
+                justify-content: center;
+                gap: 32px;
+                margin-top: 20px;
+                text-align: center;
+                 
+             
+                a{
+                    text-decoration: none;
+                   
+                    color: $black;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;
+
+                }
+            }
+             }
+             @media screen and (max-width:1084px){
+                flex-wrap: nowrap;
+                .header_once{
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                
+             }
+             @media screen  and (max-width:888px){
+                .header_once{
+                    img{
+                        display: none;
+                    }
+                }
+                
+             }
+           
+
+    }
+
+
+
+
+
+}

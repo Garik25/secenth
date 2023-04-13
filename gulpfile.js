@@ -21,6 +21,7 @@ async function htmls () {
 		.pipe(browserSync.stream());
 }
 
+
 async function styles() {
 	return gulp.src("./src/sass/styles.scss")
 		.pipe(sass().on("error", sass.logError))
