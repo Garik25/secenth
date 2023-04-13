@@ -11,12 +11,14 @@ footer{
 		
 	.footer_items{
 		display: flex;
-		justify-content:space-between;
+		justify-content:center;	
 		
-	;
-	align-items: center;
 		gap: 20px;
 		.footer_item{
+			display: flex;
+			flex-direction: column;
+			margin-top: 128px;
+			gap: 24px;
 			.footer__icons{
 				form{
 					display: flex;
@@ -44,6 +46,10 @@ footer{
 			
 		
 			h3{
+				  display: flex;
+				  justify-content: center;
+				  align-items: center;
+
 				 text-align: center;
 				font-weight: 500;
 				font-size: 20px;
@@ -54,6 +60,9 @@ footer{
 
 			}
 			.footer_a{
+				display: flex;
+				flex-direction: column;
+				gap: 32px;
 				margin: 10px 20px;
 				height: 48px;
 			
@@ -70,7 +79,6 @@ footer{
 			}
 		}
 			p{  text-align: center;
-				margin-top: 33px;
 				font-weight: 500;
 				font-size: 12px;
 				line-height: 18px;
